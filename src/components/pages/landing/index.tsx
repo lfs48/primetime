@@ -1,18 +1,20 @@
-import { useCallback, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { DateTime } from 'luxon';
 import * as S from './styled';
+import { useInterval } from '@/hooks/useInterval.hook';
 
 export default function Landing() {
 
-    const [count, setCount] = useState(0);
-    
-    const handleClick = useCallback( () => {
-        setCount((count + 1) % 10);
-    }, [count]);
+    const [time, setTime] = useState( DateTime.now() )
+
+    useInterval( () => {
+        setTime( DateTime.now() );
+    }, 100);
 
     return(
-        <S.Root onClick={handleClick}>
-            <p>Hello World! {count}</p>
+        <S.Root>
+            <S.Time>{time.toFormat('HH:mm:ss')}</S.Time>
+            <S.Number>{time.toFormat('HHmm')}</S.Number>
         </S.Root>
     )
 }

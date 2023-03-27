@@ -11,6 +11,9 @@ module.exports = {
           neon: '#FF581B'
         },
         smoke: '#2A2A2A'
+      },
+      fontFamily: {
+        digital: ['digital-7', 'sans-serif']
       }
     }
   },

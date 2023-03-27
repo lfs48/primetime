@@ -13,14 +13,17 @@ export const Root = tw.div`
 
 export const Number = tw.div`
     text-orange-neon
-    text-5xl
+    text-[12rem]
     font-semibold
     select-none
+    font-digital
 `
 
 export const Time = tw.div`
     fixed
     top-4
     right-4
+    text-lg
     text-orange-neon
+    font-digital
 `

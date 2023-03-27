@@ -3,7 +3,7 @@ import {
     Route,
     BrowserRouter
  } from "react-router-dom";
-import Landing from "@pages/landing";
+import Landing from "@/pages/landing";
 
 export default function AppRoutes() {
     return(

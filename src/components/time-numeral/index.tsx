@@ -3,7 +3,7 @@ import { DateTime } from 'luxon';
 import * as S from './styled';
 import { useInterval } from '@/hooks/useInterval.hook';
 
-export default function Landing() {
+export default function TimeNumeral() {
 
     const [time, setTime] = useState( DateTime.now() )
 
@@ -13,8 +13,7 @@ export default function Landing() {
 
     return(
         <S.Root>
-            <S.Time>{time.toFormat('HH:mm:ss')}</S.Time>
-            <S.Number>{time.toFormat('HHmm')}</S.Number>
+            {time.toFormat('HHmm')}
         </S.Root>
     )
 }

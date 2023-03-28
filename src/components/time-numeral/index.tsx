@@ -13,7 +13,7 @@ export default function TimeNumeral() {
 
     return(
         <S.Root>
-            {time.toFormat('HHmm')}
+            {time.toFormat('Hmm')}
         </S.Root>
     )
 }
